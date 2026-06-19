@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía Interactiva - Intrasev Motors ERP</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & Orbitron para temática Racing -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    <!-- MathJax para fórmulas matemáticas LaTeX -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #020205;
+            color: #f3f4f6;
+        }
+        .font-racing {
+            font-family: 'Orbitron', sans-serif;
+        }
+        /* Grid de fondo motorsport sutil */
+        .bg-grid-pattern {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+        /* Glows de Neón */
+        .glow-blue {
+            box-shadow: 0 0 20px rgba(32, 120, 227, 0.2);
+            border: 1px solid rgba(32, 120, 227, 0.4);
+        }
+        .glow-yellow {
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.15);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-grid-pattern min-h-screen pb-16">
+
+    <!-- Header Principal -->
+    <header class="relative overflow-hidden border-b border-zinc-800 bg-black py-10 px-6 text-center">
+        <!-- Decoraciones estéticas de carreras -->
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-right bg-gradient-to-r from-blue-600 via-yellow-400 to-red-600"></div>
+        <div class="absolute -top-10 -left-10 w-40 h-40 bg-blue-600 rounded-full blur-3xl opacity-20"></div>
+        <div class="absolute -top-10 -right-10 w-40 h-40 bg-yellow-500 rounded-full blur-3xl opacity-20"></div>
+        
+        <div class="max-w-6xl mx-auto relative z-10">
+            <span class="font-racing text-yellow-400 text-sm tracking-widest font-bold uppercase border border-yellow-500/30 px-3 py-1 rounded bg-yellow-500/10">Sprint 2 - Proyecto Final</span>
+            <h1 class="font-racing text-3xl md:text-5xl font-black text-white mt-4 tracking-tight">
+                INTRASEV <span class="text-blue-500">MOTORS</span>
+            </h1>
+            <p class="text-zinc-400 mt-2 max-w-2xl mx-auto text-sm md:text-base">
+                Optimización de Inventario y Cadena de Suministro para Autopartes de Alto Rendimiento
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-4 mt-6 text-xs text-zinc-500 font-racing">
+                <span class="bg-zinc-900 border border-zinc-800 px-3 py-1.5 rounded text-zinc-300">GRUPO: 64 Bits</span>
+                <span class="bg-zinc-900 border border-zinc-800 px-3 py-1.5 rounded text-zinc-300">UAC: Ing. de Sistemas</span>
+                <span class="bg-zinc-900 border border-zinc-800 px-3 py-1.5 rounded text-zinc-300">DOCENTE: Hugo Espetia H.</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido Principal de la Infografía -->
+    <main class="max-w-7xl mx-auto px-4 mt-12 grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- COLUMNA IZQUIERDA: Contexto, Empatizar y Definir (4 cols) -->
+        <section class="lg:col-span-4 space-y-8">
+            
+            <!-- Bloque 1: El Diagnóstico -->
+            <div class="bg-zinc-950/80 border border-zinc-800 rounded-xl p-6 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-24 h-24 bg-red-600/10 rounded-full blur-2xl"></div>
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="p-2 bg-red-600/10 text-red-500 rounded-lg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                    </div>
+                    <h2 class="font-racing text-lg font-bold text-white tracking-wide">EL PROBLEMA</h2>
+                </div>
+                <p class="text-zinc-400 text-sm leading-relaxed">
+                    La dependencia de <strong>registros manuales</strong> en la distribución de autopartes críticas genera retrasos, pérdidas de transacciones y desbalances financieros severos en almacén.
+                </p>
+                <div class="bg-zinc-900/50 border border-red-900/20 rounded-lg p-3 mt-4 text-xs text-red-400 font-racing">
+                    "Falta de trazabilidad y retrasos de stock críticos inmediatamente traducidos en pérdidas financieras activas."
+                </div>
+            </div>
+
+            <!-- Bloque 2: User Persona (Joseph) -->
+            <div class="bg-zinc-950/80 border border-zinc-800 rounded-xl p-6 relative overflow-hidden glow-blue">
+                <div class="absolute top-0 right-0 bg-blue-500/10 px-3 py-1 text-[10px] font-racing text-blue-400 rounded-bl-lg font-bold">USER PERSONA</div>
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-600 to-blue-900 flex items-center justify-center font-racing text-white font-bold text-lg">
+                        J
+                    </div>
+                    <div>
+                        <h3 class="font-racing text-base font-bold text-white">Joseph (27 años)</h3>
+                        <p class="text-xs text-zinc-400">Encargado de Almacén - Intrasev</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4 text-xs">
+                    <div>
+                        <span class="text-zinc-500 font-bold block uppercase tracking-wider">Metas</span>
+                        <p class="text-zinc-300 mt-1">Controlar el stock en tiempo real, reducir mermas y generar reportes ágiles.</p>
+                    </div>
+                    <div>
+                        <span class="text-zinc-500 font-bold block uppercase tracking-wider">Frustraciones</span>
+                        <p class="text-zinc-300 mt-1">Sistemas lentos, planillas Excel desactualizadas y descuadres de stock.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bloque 3: Pilares de la Solución -->
+            <div class="bg-zinc-950/80 border border-zinc-800 rounded-xl p-6">
+                <h2 class="font-racing text-lg font-bold text-white mb-4 tracking-wide text-blue-400">LA SOLUCIÓN PROPUESTA</h2>
+                <div class="space-y-4">
+                    <div class="flex gap-3">
+                        <div class="font-racing text-yellow-400 font-black text-xl">01</div>
+                        <div>
+                            <h4 class="font-bold text-sm text-zinc-200">ERP a Medida</h4>
+                            <p class="text-xs text-zinc-400">Tecnología web responsiva adaptada a las necesidades mecánicas de Intrasev Motors.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <div class="font-racing text-yellow-400 font-black text-xl">02</div>
+                        <div>
+                            <h4 class="font-bold text-sm text-zinc-200">Alertas de Stock Semáforo</h4>
+                            <p class="text-xs text-zinc-400">Notificación automática mediante códigos de colores para componentes en stock crítico.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- COLUMNA CENTRAL-DERECHA: Arquitectura, Base de Datos, IA e Interacción (8 cols) -->
+        <section class="lg:col-span-8 space-y-8">
+            
+            <!-- Bloque 4: Los Módulos del Sistema (Interactivo) -->
+            <div class="bg-zinc-950/80 border border-zinc-800 rounded-xl p-6">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+                    <div>
+                        <h2 class="font-racing text-xl font-bold text-white tracking-wide">ARQUITECTURA DE MÓDULOS</h2>
+                        <p class="text-xs text-zinc-400 mt-1">Haz clic en cada módulo para ver su alcance funcional detallado</p>
+                    </div>
+                    <span class="text-xs text-yellow-400 font-racing border border-yellow-500/20 px-2 py-1 rounded bg-yellow-500/5">7 Módulos Clave</span>
+                </div>
+
+                <!-- Botones de los Módulos -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6">
+                    <button onclick="switchModule('clientes')" id="btn-clientes" class="module-btn font-racing text-xs p-3 rounded-lg border bg-zinc-900 border-zinc-800 text-zinc-400 hover:text-white transition-all text-center">
+                        👤 Clientes
+                    </button>
+                    <button onclick="switchModule('inventario')" id="btn-inventario" class="module-btn font-racing text-xs p-3 rounded-lg border bg-zinc-900 border-zinc-800 text-zinc-400 hover:text-white transition-all text-center active-tab">
+                        📦 Inventario
+                    </button>
+                    <button onclick="switchModule('ventas')" id="btn-ventas" class="module-btn font-racing text-xs p-3 rounded-lg border bg-zinc-900 border-zinc-800 text-zinc-400 hover:text-white transition-all text-center">
+                        ⚡ Ventas (POS)
+                    </button>
+                    <button onclick="switchModule('reportes')" id="btn-reportes" class="module-btn font-racing text-xs p-3 rounded-lg border bg-zinc-900 border-zinc-800 text-zinc-400 hover:text-white transition-all text-center">
+                        📈 Analíticas
+                    </button>
+                </div>
+
+                <!-- Contenedores Dinámicos de Información -->
+                <div class="bg-zinc-900/40 border border-zinc-800 rounded-lg p-5">
+                    <!-- Clientes -->
+                    <div id="mod-clientes" class="module-content hidden space-y-3">
+                        <h3 class="font-racing text-sm font-bold text-blue-400">Módulo de Gestión de Clientes</h3>
+                        <p class="text-xs text-zinc-400">Permite registrar y discriminar de manera inteligente si se trata de un cliente corporativo (RUC, 11 dígitos) o natural (DNI, 8 dígitos).</p>
+                        <ul class="text-xs text-zinc-300 space-y-2 list-disc pl-5">
+                            <li>Registro dinámico y validación fiscal inteligente.</li>
+                            <li>Historial clínico de compras enlazado a transacciones SQL.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Inventario -->
+                    <div id="mod-inventario" class="module-content space-y-3">
+                        <h3 class="font-racing text-sm font-bold text-blue-400">Módulo de Productos (Control Multimarca)</h3>
+                        <p class="text-xs text-zinc-400">Optimizado para autopartes de alta gama como motores de rendimiento y kits de suspensión selectos compatible con marcas exclusivas.</p>
+                        <ul class="text-xs text-zinc-300 space-y-2 list-disc pl-5">
+                            <li>Visualización de stock seguro, advertencia y reposición crítica.</li>
+                            <li>Clasificación precisa: Categorías (Motor, Repuesto) vinculados a marcas compatibles (BMW, Mercedes, Audi, etc.).</li>
+                        </ul>
+                    </div>
+
+                    <!-- Ventas -->
+                    <div id="mod-ventas" class="module-content hidden space-y-3">
+                        <h3 class="font-racing text-sm font-bold text-blue-400">Módulo Transaccional (POS con Lógica de Seguridad)</h3>
+                        <p class="text-xs text-zinc-400">El núcleo del sistema. Permite agregar items de forma simultánea calculando automáticamente el subtotal mediante transacciones matemáticas limpias.</p>
+                        <ul class="text-xs text-zinc-300 space-y-2 list-disc pl-5">
+                            <li>Lógica de venta multilinea con cálculos automáticos.</li>
+                            <li>Generación rápida de comprobantes digitales (PDF o impresión térmica directa).</li>
+                        </ul>
+                    </div>
+
+                    <!-- Reportes -->
+                    <div id="mod-reportes" class="module-content hidden space-y-3">
+                        <h3 class="font-racing text-sm font-bold text-blue-400">Reportes de Inteligencia de Negocio</h3>
+                        <p class="text-xs text-zinc-400">Diseñado para la gerencia y toma rápida de decisiones utilizando agregaciones SQL avanzadas en tiempo real.</p>
+                        <ul class="text-xs text-zinc-300 space-y-2 list-disc pl-5">
+                            <li>Ranking de rotación de productos (los más vendidos).</li>
+                            <li>Proyección financiera y análisis predictivo de flujo de caja corporativo.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bloque 5: Modelo de Base de Datos (Relaciones Clave de IntrasevMotors) -->
+            <div class="bg-zinc-950/80 border border-zinc-800 rounded-xl p-6 relative overflow-hidden">
+                <h2 class="font-racing text-xl font-bold text-white mb-4 tracking-wide">ESTRUCTURA DE DATOS RELACIONAL</h2>
+                <p class="text-xs text-zinc-400 mb-6">Visualización esquemática de la normalización del motor de base de datos de Intrasev Motors:</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <!-- Tabla Categorías -->
+                    <div class="border border-zinc-800 bg-zinc-900/50 rounded p-4">
+                        <div class="font-racing text-xs text-yellow-400 border-b border-zinc-800 pb-2 mb-2">Categorías</div>
+                        <ul class="text-[11px] font-mono text-zinc-400 space-y-1">
+                            <li>🔑 idCategoria <span class="text-blue-500">PK</span></li>
+                            <li>👤 nombre</li>
+                        </ul>
+                    </div>
+
+                    <!-- Tabla Productos (Central) -->
+                    <div class="border border-zinc-700 bg-zinc-900 rounded p-4 glow-blue">
+                        <div class="font-racing text-xs text-blue-400 border-b border-zinc-800 pb-2 mb-2">📦 Productos</div>
+                        <ul class="text-[11px] font-mono text-zinc-300 space-y-1">
+                            <li>🔑 idProducto <span class="text-blue-500">PK</span></li>
+                            <li>⚙️ codigo</li>
+                            <li>🏷️ nombre</li>
+                            <li>📁 idCategoria <span class="text-zinc-500">FK</span></li>
+                            <li>💵 precio</li>
+                            <li>📊 stock</li>
+                            <li>🚨 stockMinimo</li>
+                        </ul>
+                    </div>
+
+                    <!-- Tabla AlertasStock -->
+                    <div class="border border-zinc-800 bg-zinc-900/50 rounded p-4">
+                        <div class="font-racing text-xs text-red-400 border-b border-zinc-800 pb-2 mb-2">🚨 AlertasStock</div>
+                        <ul class="text-[11px] font-mono text-zinc-400 space-y-1">
+                            <li>🔑 idAlerta <span class="text-blue-500">PK</span></li>
+                            <li>📦 idProducto <span class="text-zinc-500">FK</span></li>
+                            <li>⚠️ stockActual</li>
+                            <li>⚠️ stockMinimo</li>
+                            <li>📅 fechaAlerta</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Lógica de Negocio en LaTeX -->
+                <div class="bg-zinc-900/50 border border-zinc-800 rounded-lg p-4 mt-6">
+                    <h4 class="text-xs font-racing text-zinc-300 uppercase tracking-widest mb-2">Control Matemático de Stock</h4>
+                    <p class="text-xs text-zinc-400 mb-2">
+                        El sistema valida la suficiencia del inventario antes de autorizar cualquier transacción mediante la relación:
+                    </p>
+                    <div class="text-center py-2 text-zinc-200 text-sm overflow-x-auto">
+                        $$\text{Stock}_{\text{disponible}} \ge \text{Cantidad}_{\text{solicitada}}$$
+                    </div>
+                    <p class="text-xs text-zinc-400 mt-2">
+                        Inmediatamente confirmada, el ERP calcula la actualización en la base de datos de manera atómica:
+                    </p>
+                    <div class="text-center py-2 text-zinc-200 text-sm overflow-x-auto">
+                        $$\text{Stock}_{\text{nuevo}} = \text{Stock}_{\text{actual}} - \text{Cantidad}_{\text{vendida}}$$
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bloque 6: Ingeniería de Prompts (Copiloto IA) -->
+            <div class="bg-zinc-950/80 border border-zinc-800 rounded-xl p-6 glow-yellow">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="p-2 bg-yellow-500/10 text-yellow-400 rounded-lg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <h2 class="font-racing text-xl font-bold text-white tracking-wide">INGENIERÍA DE PROMPTS</h2>
+                </div>
+                <p class="text-xs text-zinc-400 mb-4">
+                    La IA como copiloto estratégico acelerando el desarrollo de la arquitectura desde el modelado UI/UX en <strong>Google Stitch</strong> hasta la codificación guiada en <strong>Google AI Studio</strong>.
+                </p>
+
+                <!-- Acordeón de Prompts -->
+                <div class="space-y-3">
+                    <details class="bg-zinc-900/60 rounded-lg border border-zinc-800 p-3 group">
+                        <summary class="font-racing text-xs font-bold text-zinc-300 cursor-pointer select-none outline-none flex justify-between items-center">
+                            <span>💻 Prompt 1: Generación del Módulo de Productos</span>
+                            <span class="text-zinc-500 group-open:rotate-180 transition-transform">▼</span>
+                        </summary>
+                        <div class="mt-2 text-xs text-zinc-400 space-y-2 border-t border-zinc-800/50 pt-2">
+                            <p class="bg-black/40 p-2 rounded text-zinc-300 border-l-2 border-yellow-500 font-mono text-[11px]">
+                                "Genera el código de una aplicación web utilizando React y Tailwind CSS para gestionar productos de una empresa de autopartes. Debe incluir un formulario para registrar productos..."
+                            </p>
+                            <p class="text-zinc-400"><strong class="text-yellow-400">Resultado:</strong> UI interactiva responsiva lista para consumo inmediato de datos simulados.</p>
+                        </div>
+                    </details>
+
+                    <details class="bg-zinc-900/60 rounded-lg border border-zinc-800 p-3 group">
+                        <summary class="font-racing text-xs font-bold text-zinc-300 cursor-pointer select-none outline-none flex justify-between items-center">
+                            <span>⚡ Prompt 2: Lógica de Stock Automático</span>
+                            <span class="text-zinc-500 group-open:rotate-180 transition-transform">▼</span>
+                        </summary>
+                        <div class="mt-2 text-xs text-zinc-400 space-y-2 border-t border-zinc-800/50 pt-2">
+                            <p class="bg-black/40 p-2 rounded text-zinc-300 border-l-2 border-yellow-500 font-mono text-[11px]">
+                                "Actúa como un desarrollador Full Stack experto. Genera la lógica en JavaScript para un sistema de ventas donde, al confirmar una transacción, se descuente automáticamente la cantidad vendida..."
+                            </p>
+                            <p class="text-zinc-400"><strong class="text-yellow-400">Resultado:</strong> Funciones robustas de validación de límites, previniendo errores de stock negativo.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <!-- Bloque 7: Despliegue & Métricas del Negocio (Sprint 2) -->
+            <div class="bg-zinc-950/80 border border-zinc-800 rounded-xl p-6">
+                <h2 class="font-racing text-xl font-bold text-white mb-4 tracking-wide">MÉTRICAS & RESULTADOS DEL SPRINT</h2>
+                
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+                    <div class="bg-zinc-900/60 border border-zinc-800 p-4 rounded-xl">
+                        <span class="text-xs text-zinc-500 block font-racing">Marcas</span>
+                        <span class="font-racing text-2xl font-black text-yellow-400">50+</span>
+                    </div>
+                    <div class="bg-zinc-900/60 border border-zinc-800 p-4 rounded-xl">
+                        <span class="text-xs text-zinc-500 block font-racing">Valor de Almacén</span>
+                        <span class="font-racing text-2xl font-black text-blue-500">S/ 173K</span>
+                    </div>
+                    <div class="bg-zinc-900/60 border border-zinc-800 p-4 rounded-xl">
+                        <span class="text-xs text-zinc-500 block font-racing">Stock Crítico</span>
+                        <span class="font-racing text-2xl font-black text-red-500">12</span>
+                    </div>
+                    <div class="bg-zinc-900/60 border border-zinc-800 p-4 rounded-xl">
+                        <span class="text-xs text-zinc-500 block font-racing">Estado Despliegue</span>
+                        <span class="font-racing text-xs font-bold text-emerald-500 block mt-2">100% ONLINE</span>
+                    </div>
+                </div>
+
+                <div class="mt-6 flex flex-col sm:flex-row gap-4 justify-between items-center bg-zinc-900/40 border border-zinc-800 p-4 rounded-lg">
+                    <div class="text-left">
+                        <h4 class="text-xs font-racing text-white font-bold uppercase tracking-wider">Demostración en Línea</h4>
+                        <p class="text-[11px] text-zinc-400 mt-1">Accede al prototipo web y repositorio del proyecto</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="https://github.com/jhancod3/Proyecto-intrasev" target="_blank" class="font-racing text-xs bg-zinc-800 text-zinc-200 border border-zinc-700 hover:bg-zinc-700 hover:text-white px-4 py-2 rounded transition-all">
+                            📦 GitHub Repo
+                        </a>
+                        <a href="https://dataepis.uandina.pe:49275/ds/grupol" target="_blank" class="font-racing text-xs bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded transition-all">
+                            🚀 Demo Web
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer Corporativo -->
+    <footer class="max-w-7xl mx-auto px-4 mt-16 text-center border-t border-zinc-900 pt-8 text-xs text-zinc-600">
+        <p class="font-racing uppercase tracking-widest text-zinc-500 mb-2">Desarrollado por Grupo 64 bits</p>
+        <div class="flex flex-wrap justify-center gap-4 text-[11px] text-zinc-500">
+            <span>Triveños Llaccta Richard</span>
+            <span>•</span>
+            <span>Yehan Carlos Surcos Alvarez</span>
+            <span>•</span>
+            <span>Mariño Chauca Joseph Beder</span>
+            <span>•</span>
+            <span>Zavaleta Fuentes Paolo</span>
+        </div>
+        <p class="mt-6 text-zinc-700">© 2026 Universidad Andina del Cusco. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Script para Interactividad Dinámica de los Módulos -->
+    <script>
+        function switchModule(moduleId) {
+            // Ocultar todos los contenidos de módulos
+            const contents = document.querySelectorAll('.module-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+            });
+
+            // Quitar clase activa de todos los botones
+            const buttons = document.querySelectorAll('.module-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('border-blue-500', 'text-white', 'bg-blue-500/10');
+                btn.classList.add('border-zinc-800', 'text-zinc-400', 'bg-zinc-900');
+            });
+
+            // Mostrar el módulo seleccionado
+            document.getElementById('mod-' + moduleId).classList.remove('hidden');
+
+            // Dar estilo al botón activo
+            const activeBtn = document.getElementById('btn-' + moduleId);
+            activeBtn.classList.add('border-blue-500', 'text-white', 'bg-blue-500/10');
+            activeBtn.classList.remove('border-zinc-800', 'text-zinc-400', 'bg-zinc-900');
+        }
+
+        // Inicializar con el módulo de Inventario activo visualmente
+        document.addEventListener("DOMContentLoaded", function() {
+            switchModule('inventario');
+        });
+    </script>
+</body>
+</html>
